@@ -1,0 +1,10 @@
+fastapi==0.115.6
+uvicorn[standard]==0.34.0
+python-multipart==0.0.20
+pymupdf==1.27.2
+pdfplumber==0.11.9
+unstructured==0.23.1
+unstructured-inference==1.6.13
+llama-parse==0.6.4
+anthropic==0.69.0
+pillow==12.1.1
