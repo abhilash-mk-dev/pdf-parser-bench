@@ -39,6 +39,12 @@ and a real network call per document — note the ~3.5-6.5 second latency,
 roughly 3 orders of magnitude slower than PyMuPDF, consistent with an
 async, network-bound, LLM-backed parsing job rather than local computation.
 
-`unstructured_fast` and `vision_claude` remain untested in this run — see
-the written report (Sections 3.3 and 3.5) for why, and what would be tested
-next.
+`unstructured_fast` and `vision_claude` remain untested/unresolved in this
+run. For `unstructured_fast`: the required spaCy model downloaded
+successfully (confirmed -- this is not a blocked-network issue), but
+`partition_pdf` still returned 0 elements with no exception, for an
+unconfirmed reason. The `hi_res` strategy failed separately and more
+specifically, with an OCR-backend initialization error (`Could not get
+the OCRAgent instance`), suggesting a missing Tesseract install. See the
+written report (Section 3.3) for the full writeup, and Section 3.5 for
+why `vision_claude` is still untested.
